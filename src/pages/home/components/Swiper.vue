@@ -1,7 +1,7 @@
 <template>
     <div class="wrapper">
     <swiper :options="swiperOptions">
-    <swiper-slide v-for="item of swiperList">
+    <swiper-slide v-for="item of swiperList" :key="item.id">
         <img class="swiper-img" :src="item.imgUrl"/> 
     </swiper-slide>
     <div class="swiper-pagination" slot="pagination"></div>
@@ -17,9 +17,11 @@
             return {
                 swiperOptions: {
                     pagination:{
-                        el:'.swiper-pagination'
+                        el:'.swiper-pagination',
+                        loop:true
+                     }
                     },
-                    swiperList:[{
+                swiperList:[{
                      id:'0001',
                      imgUrl:'https://imgs.qunarzz.com/sight/p0/1712/19/19bc8bdb7062470a3.img.jpg_710x360_a9d2dcfb.jpg'
                     },{  
@@ -29,7 +31,6 @@
                     id:'0003',
                      imgUrl:'https://imgs.qunarzz.com/sight/p0/1712/80/8046ad69c7c4b9fca3.img.jpg_710x360_514a456d.jpg'
                     }]
-                }
             }
         }
     }
@@ -46,5 +47,5 @@
         background: #eee;
         .swiper-img
             width: 100%
-
+            height: 17.2vh;
 </style>
