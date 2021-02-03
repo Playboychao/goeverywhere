@@ -2,7 +2,6 @@
     <div>
         <HomeHeader></HomeHeader>
         <HomeSwiper></HomeSwiper>
-        <div>test</div>
     </div>
 </template>
 
