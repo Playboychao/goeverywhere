@@ -47,5 +47,5 @@
         background: #eee;
         .swiper-img
             width: 100%
-            height: 17.2vh;
+            height: 17.5vh;
 </style>
