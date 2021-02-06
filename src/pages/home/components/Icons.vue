@@ -66,7 +66,7 @@
                 const pages = []
                 this.iconList.forEach((item,index)=>{
                   const page = Math.floor(index / 8)
-                  if(pages[page]){
+                if(!pages[page]){
                       pages[page] = []
                   }
                   pages[page].push(item)
@@ -78,7 +78,8 @@
 </script>
 
 <style lang="stylus" scoped>
-@import '~styles/varibles.styl';
+@import '~styles/varibles.styl'
+@import '~styles/mixins.styl';
 .icons >>> .swiper-container
     height 0
     padding-bottom 50%
@@ -109,5 +110,6 @@
     height: .44rem;
     line-height .44rem
     text-align center
-    color: $darkTextColor;
+    color: $darkTextColor
+    ellipsis()
 </style>
