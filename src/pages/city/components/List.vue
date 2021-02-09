@@ -23,9 +23,9 @@
 @import '~styles/varibles.styl'
 .border-topbottom
     &:before
-        border 1px solid #777
+        border-color #777
     &:after
-        border 1px solid #777
+        border-color #777
 .title
     line-height .44rem
     background #eee
