@@ -23,7 +23,7 @@
     display flex
     flex-direction column
     justify-content center
-    position: abosolute;
+    position: absolute;
     top: 1.58rem;
     right 0
     bottom 0
