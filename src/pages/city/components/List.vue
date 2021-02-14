@@ -34,11 +34,11 @@
         <div class="area">
             <div class="title border-topbottom">A</div>
             <div class="item-list">
-                <div class="item">阿拉尔</div>
-                <div class="item">阿拉尔</div>
-                <div class="item">阿拉尔</div>
-                <div class="item">阿拉尔</div>
-                <div class="item">阿拉尔</div>
+                <div class="item border-bottom">阿拉尔</div>
+                <div class="item border-bottom">阿拉尔</div>
+                <div class="item border-bottom">阿拉尔</div>
+                <div class="item border-bottom">阿拉尔</div>
+                <div class="item border-bottom">阿拉尔</div>
             </div>
         </div>
     </div>
