@@ -6,8 +6,8 @@
         :key="item"
         :ref="item"
         @touchstart="handleTouchStart"
-        @TouchMove="handleTouchMove"
-        @TouchEnd="handleTouchEnd"
+        @touchmove="handleTouchMove"
+        @touchend="handleTouchEnd"
         @click="handleLetterClick"
         >
             {{item}}
