@@ -6,7 +6,7 @@
                 </div>
                 <div class="button-list">
                     <div class="button-wrapper">
-                        <div class="button">北京</div>
+                        <div class="button">{{this.$store.state.city}}</div>
                     </div>
                 </div>
             </div>
@@ -17,6 +17,7 @@
                     class="button-wrapper" 
                     v-for="item of hot" 
                     :key="item.id"
+                    @click="handleCityClick(item.name)"
                     >
                         <div class="button">{{item.name}}</div>
                     </div>
@@ -52,8 +53,10 @@ import BScroll from '@better-scroll/core'
             "cities",
             "letter"
         ],
-        mounted () {
-            this.scroll = new BScroll(this.$refs.wrapper)
+        methods:{
+            handleCityClick(city){
+                this.$store.dispatch('changeCity',city)
+            }
         },
         watch: {
             letter(){
@@ -62,7 +65,10 @@ import BScroll from '@better-scroll/core'
                     this.scroll.scrollToElement(element)
                 }
             }
-        }
+        },
+        mounted () {
+            this.scroll = new BScroll(this.$refs.wrapper)
+        },
     }
 </script>
 
