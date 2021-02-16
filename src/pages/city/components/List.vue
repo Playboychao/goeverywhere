@@ -2,7 +2,8 @@
     <div class="list" ref="wrapper">
         <div>
             <div class="area">
-                <div class="title border-topbottom">当前城市
+                <div class="title border-topbottom">
+                    当前城市
                 </div>
                 <div class="button-list">
                     <div class="button-wrapper">
@@ -33,8 +34,9 @@
                 <div class="item-list">
                     <div 
                     class="item border-bottom"
-                    v-for="innerItem of item"
+                    v-for="innerItem of item" 
                     :key="innerItem.id"
+                    @click="handleCityClick(innerItem.name)"
                     >
                     {{innerItem.name}}
                     </div>
@@ -55,7 +57,8 @@ import BScroll from '@better-scroll/core'
         ],
         methods:{
             handleCityClick(city){
-                this.$store.dispatch('changeCity',city)
+                this.$store.commit('changeCity',city)
+                this.$router.push('/')
             }
         },
         watch: {

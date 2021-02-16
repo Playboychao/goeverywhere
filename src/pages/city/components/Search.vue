@@ -17,6 +17,7 @@
                 <li class="search-item border-bottom"
                  v-for="item of list"
                 :key='item.id'
+                @click="handleCityClick(item.name)"
                 >
                     {{item.name}}
                 </li>
@@ -66,6 +67,12 @@ import Bscroll from 'better-scroll'
                     }
                     this.list = result
                 },100)
+            }
+        },
+        methods:{
+            handleCityClick(city){
+                this.$store.commit('changeCity',city)
+                this.$router.push('/')
             }
         },
         mounted (){
