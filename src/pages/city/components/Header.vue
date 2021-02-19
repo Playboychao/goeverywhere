@@ -2,7 +2,7 @@
     <div class="header">
         城市选择
         <router-link to="/">
-        <div class="iconfont header-back">&#xe624;</div>
+            <div class="iconfont header-back">&#xe624;</div>
         </router-link>
     </div>
 </template>
@@ -16,6 +16,8 @@
 <style lang="stylus" scoped>
 @import '~styles/varibles.styl'
 .header
+    position: relative;
+    overflow: hidden;
     height $headerHeight
     line-height $headerHeight
     text-align center
