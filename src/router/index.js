@@ -20,8 +20,8 @@ Vue.use(VueRouter)
     path: '/detail/:id',
     name: 'Detail',
     component: Detail,
-  },
-]
+  }]
+
 
 const router = new VueRouter({
   routes
