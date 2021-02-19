@@ -4,7 +4,7 @@
             <img class="banner-img" :src="bannerImg">
             <div class="banner-info">
                 <div class="banner-title">
-                    {{this.sightName}}
+                    {{this.signName}}
                 </div>
                 <div class="banner-number">
                     <span class="iconfont banner-icon">&#xeaf2;
@@ -13,17 +13,20 @@
                 </div>
             </div>
         </div>
-        <CommonGallary 
-        :imgs="bannerImgs"
-        v-show="showGallary"
-        @close="handleGallaryClick"
-        >
-        </CommonGallary>
+        <FadeAnimation>
+            <CommonGallary 
+            :imgs="bannerImgs"
+            v-show="showGallary"
+            @close="handleGallaryClick"
+            >
+            </CommonGallary>
+        </FadeAnimation>
     </div>
 </template>
 
 <script>
 import CommonGallary from 'common/gallary/Gallary'
+import FadeAnimation from 'common/fade/FadeAnimation'
     export default {
         name:'DetialBanner',
         props:{
@@ -45,7 +48,8 @@ import CommonGallary from 'common/gallary/Gallary'
             }
         },
         components:{
-            CommonGallary
+            CommonGallary,
+            FadeAnimation
         }
     }
 </script>
